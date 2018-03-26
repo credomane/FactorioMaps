@@ -2,9 +2,9 @@ function fm.generateIndex(data)
     -- generate index.html
     local pathName = "FactorioMaps/" .. data.folderName .. "/index.html"
 
-    local googleKey = ""
+    local googleKey = "?v=3.3"
     if (data.googleKey ~= nil) and (data.googleKey ~= "") then
-        googleKey = "?key=" .. data.googleKey
+        googleKey = "?v=3.3&key=" .. data.googleKey
     end
 
     local indexText = [[
