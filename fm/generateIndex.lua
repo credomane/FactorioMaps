@@ -83,7 +83,6 @@ var map;
 
 function update_map() {
     checkBounds();
-    update_url();
 }
 
 // If the map position is out of range, move it back
@@ -152,6 +151,7 @@ function load() {
     map.addListener('center_changed', update_map);
     map.addListener('zoom_changed', update_map);
 
+    map.addListener('idle', update_url);
 
 //  addmarker();
 //  addoutline();
