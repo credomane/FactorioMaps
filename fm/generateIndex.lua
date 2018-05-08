@@ -123,10 +123,6 @@ function hash_changed() {
     }
 }
 
-if ("onhashchange" in window) {
-    window.onhashchange = hash_changed
-}
-
 function load() {
     var mapOptions = {
         zoom: ]].. (data.index.minZoomLevel) ..[[,
