@@ -4,7 +4,7 @@ function fm.generateIndex(data)
 
     local googleKey = ""
     if (data.googleKey ~= nil) and (data.googleKey ~= "") then
-        googleKey = "?key=" .. data.googleKey
+        googleKey = "&key=" .. data.googleKey ..
     end
 
     local indexText = [[
@@ -24,10 +24,10 @@ function fm.generateIndex(data)
     For local use, don't change anything.
     For server use (making it available on a website):
         1. Get a Google Maps API key from https://developers.google.com/maps/documentation/javascript/get-api-key
-        2. Add ?key=INSERTAPIKEY to the end of the below script URL
+        2. Add &key=INSERTAPIKEY to the end of the below script URL
         3. Finally replace INSERTAPIKEY with the API key you obtained in step #1.
 -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js]] .. googleKey .. [["></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.3]] .. googleKey .. [["></script>
 <script>
 function CustomMapType() {}
 
